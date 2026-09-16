@@ -1,6 +1,7 @@
 {
-  "name": "smart-triage-agent",
+  "name": "trievo-clinical-nlp",
   "version": "1.0.0",
+  "description": "TRIEVO Healthcare — Clinical NLP Prototype",
   "private": true,
   "scripts": {
     "dev": "next dev",

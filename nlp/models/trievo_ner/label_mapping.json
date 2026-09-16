@@ -1,0 +1,24 @@
+{
+  "label2id": {
+    "O": 0,
+    "B-DISEASE_PROBLEM": 1,
+    "I-DISEASE_PROBLEM": 2,
+    "B-MEDICATION_CHEMICAL": 3,
+    "I-MEDICATION_CHEMICAL": 4,
+    "B-SYMPTOM_SIGN": 5,
+    "I-SYMPTOM_SIGN": 6,
+    "B-PROCEDURE_TEST": 7,
+    "I-PROCEDURE_TEST": 8
+  },
+  "id2label": {
+    "0": "O",
+    "1": "B-DISEASE_PROBLEM",
+    "2": "I-DISEASE_PROBLEM",
+    "3": "B-MEDICATION_CHEMICAL",
+    "4": "I-MEDICATION_CHEMICAL",
+    "5": "B-SYMPTOM_SIGN",
+    "6": "I-SYMPTOM_SIGN",
+    "7": "B-PROCEDURE_TEST",
+    "8": "I-PROCEDURE_TEST"
+  }
+}

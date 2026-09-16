@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Manrope } from "next/font/google";
 import "./globals.css";
-import { PatientProvider } from "@/lib/patient-context";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -16,9 +15,9 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "SMART TRIAGE AGENT | AI-Powered Emergency Decision Support System",
+  title: "TRIEVO Healthcare — Clinical NLP Prototype",
   description:
-    "An academic healthcare AI prototype assisting emergency department staff in prioritizing incoming patients based on symptoms, vital signs, and multi-agent AI triage.",
+    "Clinical Named Entity Recognition and Medical Text Intelligence Prototype for Trievo Healthcare.",
 };
 
 export default function RootLayout({
@@ -28,10 +27,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${manrope.variable}`}>
-      <body className="min-h-screen bg-background text-clinical-text antialiased selection:bg-emerald-light selection:text-emerald-dark">
-        <PatientProvider>
-          {children}
-        </PatientProvider>
+      <body className="min-h-screen bg-[#F7F7F2] text-[#1C2624] antialiased selection:bg-[#D1FAE5] selection:text-[#065F46]">
+        {children}
       </body>
     </html>
   );

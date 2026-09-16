@@ -1,0 +1,79 @@
+{
+  "dataset_description": "CUSTOM TRIEVO TEST DATA - Isolated clinical test cases for emergency room triage evaluation. Strictly held out from training.",
+  "dataset_type": "CUSTOM_TRIEVO_TEST_DATA",
+  "num_cases": 12,
+  "cases": [
+    {
+      "id": "trievo_01",
+      "category": "cardiovascular_emergency",
+      "text": "Patient presents with acute retrosternal chest pain radiating to left arm with diaphoresis.",
+      "expected_clinical_entities": ["retrosternal chest pain", "diaphoresis"]
+    },
+    {
+      "id": "trievo_02",
+      "category": "respiratory_emergency",
+      "text": "Patient has severe shortness of breath, bilateral wheezing, and productive cough for 3 days.",
+      "expected_clinical_entities": ["shortness of breath", "wheezing", "productive cough"]
+    },
+    {
+      "id": "trievo_03",
+      "category": "infectious_fever",
+      "text": "Male with persistent high grade fever, retro-orbital headache, and severe myalgia suspicious for dengue fever.",
+      "expected_clinical_entities": ["fever", "headache", "myalgia", "dengue fever"]
+    },
+    {
+      "id": "trievo_04",
+      "category": "tuberculosis",
+      "text": "Patient with chronic hemoptysis, night sweats, significant weight loss, and suspected pulmonary tuberculosis.",
+      "expected_clinical_entities": ["hemoptysis", "night sweats", "weight loss", "pulmonary tuberculosis"]
+    },
+    {
+      "id": "trievo_05",
+      "category": "abdominal_acute",
+      "text": "Young female with acute severe lower right quadrant abdominal pain, nausea, and vomiting.",
+      "expected_clinical_entities": ["abdominal pain", "nausea", "vomiting"]
+    },
+    {
+      "id": "trievo_06",
+      "category": "trauma_rti",
+      "text": "Driver involved in road traffic accident presents with blunt chest trauma, rib fractures, and respiratory distress.",
+      "expected_clinical_entities": ["blunt chest trauma", "rib fractures", "respiratory distress"]
+    },
+    {
+      "id": "trievo_07",
+      "category": "medication_cardiac",
+      "text": "Elderly male on metoprolol and aspirin reports bradycardia and dizziness.",
+      "expected_clinical_entities": ["metoprolol", "aspirin", "bradycardia", "dizziness"]
+    },
+    {
+      "id": "trievo_08",
+      "category": "neurological_emergency",
+      "text": "Sudden onset severe occipital headache described as worst headache of life with neck stiffness.",
+      "expected_clinical_entities": ["occipital headache", "headache", "neck stiffness"]
+    },
+    {
+      "id": "trievo_09",
+      "category": "infectious_malaria_dengue",
+      "text": "High spiking fevers with rigors, thrombocytopenia, and petechial rash observed following travel.",
+      "expected_clinical_entities": ["fevers", "rigors", "thrombocytopenia", "petechial rash"]
+    },
+    {
+      "id": "trievo_10",
+      "category": "trauma_fall",
+      "text": "Elderly woman fell sustaining suspected femoral neck fracture and acute severe hip pain.",
+      "expected_clinical_entities": ["femoral neck fracture", "hip pain"]
+    },
+    {
+      "id": "trievo_11",
+      "category": "respiratory_asthma",
+      "text": "Child presenting with acute asthma exacerbation, gasping, and intercostal retractions.",
+      "expected_clinical_entities": ["asthma exacerbation", "gasping", "intercostal retractions"]
+    },
+    {
+      "id": "trievo_12",
+      "category": "complex_emergency",
+      "text": "Patient has severe acute chest pain for 3 days but denies shortness of breath; treated with nitroglycerin.",
+      "expected_clinical_entities": ["chest pain", "shortness of breath", "nitroglycerin"]
+    }
+  ]
+}

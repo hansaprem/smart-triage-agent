@@ -1,0 +1,34 @@
+# Trievo Healthcare - Clinical NLP Configuration
+# ===================================================
+
+model:
+  name_or_path: "sentence-transformers/all-MiniLM-L6-v2"
+  num_labels: 9
+  max_length: 128
+  dropout: 0.1
+
+training:
+  train_file: "nlp/data/processed/bc5cdr/train.jsonl"
+  dev_file: "nlp/data/processed/bc5cdr/dev.jsonl"
+  test_file: "nlp/data/processed/bc5cdr/test.jsonl"
+  output_dir: "nlp/models/trievo_ner"
+  batch_size: 16
+  learning_rate: 3.0e-5
+  weight_decay: 0.01
+  num_epochs: 3
+  warmup_ratio: 0.1
+  seed: 42
+  eval_steps: 100
+  save_total_limit: 2
+
+labels:
+  schema:
+    - "O"
+    - "B-DISEASE_PROBLEM"
+    - "I-DISEASE_PROBLEM"
+    - "B-MEDICATION_CHEMICAL"
+    - "I-MEDICATION_CHEMICAL"
+    - "B-SYMPTOM_SIGN"
+    - "I-SYMPTOM_SIGN"
+    - "B-PROCEDURE_TEST"
+    - "I-PROCEDURE_TEST"

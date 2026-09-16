@@ -1,0 +1,848 @@
+{
+  "dataset_type": "CUSTOM_TRIEVO_TEST_DATA",
+  "total_cases": 12,
+  "total_entities_detected": 47,
+  "case_evaluations": [
+    {
+      "case_id": "trievo_01",
+      "category": "cardiovascular_emergency",
+      "text": "Patient presents with acute retrosternal chest pain radiating to left arm with diaphoresis.",
+      "expected_entities": [
+        "retrosternal chest pain",
+        "diaphoresis"
+      ],
+      "detected_entities": [
+        {
+          "name": "Nal chest pain",
+          "severity": "Moderate",
+          "category": "Cardiovascular / Acute Condition",
+          "highlightWords": [
+            "nal",
+            "chest",
+            "pain"
+          ],
+          "confidence": 0.5691,
+          "entityType": "DISEASE_PROBLEM",
+          "span": [
+            37,
+            51
+          ]
+        },
+        {
+          "name": "Diaph",
+          "severity": "Moderate",
+          "category": "Pathology / Clinical Problem",
+          "highlightWords": [
+            "diaph"
+          ],
+          "confidence": 0.6048,
+          "entityType": "DISEASE_PROBLEM",
+          "span": [
+            79,
+            84
+          ]
+        },
+        {
+          "name": "Is",
+          "severity": "Moderate",
+          "category": "Pathology / Clinical Problem",
+          "highlightWords": [
+            "is"
+          ],
+          "confidence": 0.7251,
+          "entityType": "DISEASE_PROBLEM",
+          "span": [
+            88,
+            90
+          ]
+        }
+      ],
+      "num_detected": 3
+    },
+    {
+      "case_id": "trievo_02",
+      "category": "respiratory_emergency",
+      "text": "Patient has severe shortness of breath, bilateral wheezing, and productive cough for 3 days.",
+      "expected_entities": [
+        "shortness of breath",
+        "wheezing",
+        "productive cough"
+      ],
+      "detected_entities": [
+        {
+          "name": "Shortness",
+          "severity": "Moderate",
+          "category": "Pathology / Clinical Problem",
+          "highlightWords": [
+            "shortness"
+          ],
+          "confidence": 0.5854,
+          "entityType": "DISEASE_PROBLEM",
+          "span": [
+            19,
+            28
+          ]
+        },
+        {
+          "name": "Breath",
+          "severity": "Moderate",
+          "category": "Pathology / Clinical Problem",
+          "highlightWords": [
+            "breath"
+          ],
+          "confidence": 0.5653,
+          "entityType": "DISEASE_PROBLEM",
+          "span": [
+            32,
+            38
+          ]
+        },
+        {
+          "name": "Wheezing",
+          "severity": "Moderate",
+          "category": "Pathology / Clinical Problem",
+          "highlightWords": [
+            "wheezing"
+          ],
+          "confidence": 0.5734,
+          "entityType": "DISEASE_PROBLEM",
+          "span": [
+            50,
+            58
+          ]
+        },
+        {
+          "name": "Cough",
+          "severity": "Moderate",
+          "category": "Pathology / Clinical Problem",
+          "highlightWords": [
+            "cough"
+          ],
+          "confidence": 0.5888,
+          "entityType": "DISEASE_PROBLEM",
+          "span": [
+            75,
+            80
+          ]
+        }
+      ],
+      "num_detected": 4
+    },
+    {
+      "case_id": "trievo_03",
+      "category": "infectious_fever",
+      "text": "Male with persistent high grade fever, retro-orbital headache, and severe myalgia suspicious for dengue fever.",
+      "expected_entities": [
+        "fever",
+        "headache",
+        "myalgia",
+        "dengue fever"
+      ],
+      "detected_entities": [
+        {
+          "name": "High grade fever",
+          "severity": "Moderate",
+          "category": "Pathology / Clinical Problem",
+          "highlightWords": [
+            "high",
+            "grade",
+            "fever"
+          ],
+          "confidence": 0.5752,
+          "entityType": "DISEASE_PROBLEM",
+          "span": [
+            21,
+            37
+          ]
+        },
+        {
+          "name": "-orbital headache",
+          "severity": "Moderate",
+          "category": "Pathology / Clinical Problem",
+          "highlightWords": [
+            "-orbital",
+            "headache"
+          ],
+          "confidence": 0.6954,
+          "entityType": "DISEASE_PROBLEM",
+          "span": [
+            44,
+            61
+          ]
+        },
+        {
+          "name": "Myalgia",
+          "severity": "High",
+          "category": "Pathology / Clinical Problem",
+          "highlightWords": [
+            "myalgia"
+          ],
+          "confidence": 0.8405,
+          "entityType": "DISEASE_PROBLEM",
+          "span": [
+            74,
+            81
+          ]
+        },
+        {
+          "name": "Dengue fever",
+          "severity": "Moderate",
+          "category": "Pathology / Clinical Problem",
+          "highlightWords": [
+            "dengue",
+            "fever"
+          ],
+          "confidence": 0.7629,
+          "entityType": "DISEASE_PROBLEM",
+          "span": [
+            97,
+            109
+          ]
+        }
+      ],
+      "num_detected": 4
+    },
+    {
+      "case_id": "trievo_04",
+      "category": "tuberculosis",
+      "text": "Patient with chronic hemoptysis, night sweats, significant weight loss, and suspected pulmonary tuberculosis.",
+      "expected_entities": [
+        "hemoptysis",
+        "night sweats",
+        "weight loss",
+        "pulmonary tuberculosis"
+      ],
+      "detected_entities": [
+        {
+          "name": "Chronic",
+          "severity": "Moderate",
+          "category": "Pathology / Clinical Problem",
+          "highlightWords": [
+            "chronic"
+          ],
+          "confidence": 0.6716,
+          "entityType": "DISEASE_PROBLEM",
+          "span": [
+            13,
+            20
+          ]
+        },
+        {
+          "name": "Hemoptysis",
+          "severity": "High",
+          "category": "Pathology / Clinical Problem",
+          "highlightWords": [
+            "hemoptysis"
+          ],
+          "confidence": 0.8496,
+          "entityType": "DISEASE_PROBLEM",
+          "span": [
+            21,
+            31
+          ]
+        },
+        {
+          "name": "Night",
+          "severity": "Moderate",
+          "category": "Pathology / Clinical Problem",
+          "highlightWords": [
+            "night"
+          ],
+          "confidence": 0.5525,
+          "entityType": "DISEASE_PROBLEM",
+          "span": [
+            33,
+            38
+          ]
+        },
+        {
+          "name": "Sweats",
+          "severity": "Moderate",
+          "category": "Pathology / Clinical Problem",
+          "highlightWords": [
+            "sweats"
+          ],
+          "confidence": 0.4862,
+          "entityType": "DISEASE_PROBLEM",
+          "span": [
+            39,
+            45
+          ]
+        },
+        {
+          "name": "Weight loss",
+          "severity": "Moderate",
+          "category": "Pathology / Clinical Problem",
+          "highlightWords": [
+            "weight",
+            "loss"
+          ],
+          "confidence": 0.6613,
+          "entityType": "DISEASE_PROBLEM",
+          "span": [
+            59,
+            70
+          ]
+        },
+        {
+          "name": "Pulmonary tuberculosis",
+          "severity": "Moderate",
+          "category": "Pathology / Clinical Problem",
+          "highlightWords": [
+            "pulmonary",
+            "tuberculosis"
+          ],
+          "confidence": 0.6599,
+          "entityType": "DISEASE_PROBLEM",
+          "span": [
+            86,
+            108
+          ]
+        }
+      ],
+      "num_detected": 6
+    },
+    {
+      "case_id": "trievo_05",
+      "category": "abdominal_acute",
+      "text": "Young female with acute severe lower right quadrant abdominal pain, nausea, and vomiting.",
+      "expected_entities": [
+        "abdominal pain",
+        "nausea",
+        "vomiting"
+      ],
+      "detected_entities": [
+        {
+          "name": "Right quadrant abdominal pain",
+          "severity": "Moderate",
+          "category": "Pathology / Clinical Problem",
+          "highlightWords": [
+            "right",
+            "quadrant",
+            "abdominal",
+            "pain"
+          ],
+          "confidence": 0.6073,
+          "entityType": "DISEASE_PROBLEM",
+          "span": [
+            37,
+            66
+          ]
+        },
+        {
+          "name": "Nausea",
+          "severity": "Moderate",
+          "category": "Pathology / Clinical Problem",
+          "highlightWords": [
+            "nausea"
+          ],
+          "confidence": 0.4867,
+          "entityType": "DISEASE_PROBLEM",
+          "span": [
+            68,
+            74
+          ]
+        },
+        {
+          "name": "Vomiting",
+          "severity": "Moderate",
+          "category": "Pathology / Clinical Problem",
+          "highlightWords": [
+            "vomiting"
+          ],
+          "confidence": 0.5577,
+          "entityType": "DISEASE_PROBLEM",
+          "span": [
+            80,
+            88
+          ]
+        }
+      ],
+      "num_detected": 3
+    },
+    {
+      "case_id": "trievo_06",
+      "category": "trauma_rti",
+      "text": "Driver involved in road traffic accident presents with blunt chest trauma, rib fractures, and respiratory distress.",
+      "expected_entities": [
+        "blunt chest trauma",
+        "rib fractures",
+        "respiratory distress"
+      ],
+      "detected_entities": [
+        {
+          "name": "Road traffic accident",
+          "severity": "Moderate",
+          "category": "Pathology / Clinical Problem",
+          "highlightWords": [
+            "road",
+            "traffic",
+            "accident"
+          ],
+          "confidence": 0.5965,
+          "entityType": "DISEASE_PROBLEM",
+          "span": [
+            19,
+            40
+          ]
+        },
+        {
+          "name": "Blunt chest trauma",
+          "severity": "Moderate",
+          "category": "Cardiovascular / Acute Condition",
+          "highlightWords": [
+            "blunt",
+            "chest",
+            "trauma"
+          ],
+          "confidence": 0.6939,
+          "entityType": "DISEASE_PROBLEM",
+          "span": [
+            55,
+            73
+          ]
+        },
+        {
+          "name": "Rib fractures",
+          "severity": "Moderate",
+          "category": "Pathology / Clinical Problem",
+          "highlightWords": [
+            "rib",
+            "fractures"
+          ],
+          "confidence": 0.7247,
+          "entityType": "DISEASE_PROBLEM",
+          "span": [
+            75,
+            88
+          ]
+        },
+        {
+          "name": "Respiratory distress",
+          "severity": "Moderate",
+          "category": "Pathology / Clinical Problem",
+          "highlightWords": [
+            "respiratory",
+            "distress"
+          ],
+          "confidence": 0.6505,
+          "entityType": "DISEASE_PROBLEM",
+          "span": [
+            94,
+            114
+          ]
+        }
+      ],
+      "num_detected": 4
+    },
+    {
+      "case_id": "trievo_07",
+      "category": "medication_cardiac",
+      "text": "Elderly male on metoprolol and aspirin reports bradycardia and dizziness.",
+      "expected_entities": [
+        "metoprolol",
+        "aspirin",
+        "bradycardia",
+        "dizziness"
+      ],
+      "detected_entities": [
+        {
+          "name": "Metoprolol",
+          "severity": "Mild",
+          "category": "Pharmacology / Active Substance",
+          "highlightWords": [
+            "metoprolol"
+          ],
+          "confidence": 0.9189,
+          "entityType": "MEDICATION_CHEMICAL",
+          "span": [
+            16,
+            26
+          ]
+        },
+        {
+          "name": "Aspirin",
+          "severity": "Mild",
+          "category": "Pharmacology / Active Substance",
+          "highlightWords": [
+            "aspirin"
+          ],
+          "confidence": 0.8737,
+          "entityType": "MEDICATION_CHEMICAL",
+          "span": [
+            31,
+            38
+          ]
+        },
+        {
+          "name": "Bradycardia",
+          "severity": "High",
+          "category": "Pathology / Clinical Problem",
+          "highlightWords": [
+            "bradycardia"
+          ],
+          "confidence": 0.8152,
+          "entityType": "DISEASE_PROBLEM",
+          "span": [
+            47,
+            58
+          ]
+        },
+        {
+          "name": "Dizziness",
+          "severity": "Moderate",
+          "category": "Pathology / Clinical Problem",
+          "highlightWords": [
+            "dizziness"
+          ],
+          "confidence": 0.6891,
+          "entityType": "DISEASE_PROBLEM",
+          "span": [
+            63,
+            72
+          ]
+        }
+      ],
+      "num_detected": 4
+    },
+    {
+      "case_id": "trievo_08",
+      "category": "neurological_emergency",
+      "text": "Sudden onset severe occipital headache described as worst headache of life with neck stiffness.",
+      "expected_entities": [
+        "occipital headache",
+        "headache",
+        "neck stiffness"
+      ],
+      "detected_entities": [
+        {
+          "name": "Occipital headache",
+          "severity": "Moderate",
+          "category": "Pathology / Clinical Problem",
+          "highlightWords": [
+            "occipital",
+            "headache"
+          ],
+          "confidence": 0.7424,
+          "entityType": "DISEASE_PROBLEM",
+          "span": [
+            20,
+            38
+          ]
+        },
+        {
+          "name": "Headache",
+          "severity": "Moderate",
+          "category": "Pathology / Clinical Problem",
+          "highlightWords": [
+            "headache"
+          ],
+          "confidence": 0.4262,
+          "entityType": "DISEASE_PROBLEM",
+          "span": [
+            58,
+            66
+          ]
+        },
+        {
+          "name": "Neck stiffness",
+          "severity": "Moderate",
+          "category": "Pathology / Clinical Problem",
+          "highlightWords": [
+            "neck",
+            "stiffness"
+          ],
+          "confidence": 0.6233,
+          "entityType": "DISEASE_PROBLEM",
+          "span": [
+            80,
+            94
+          ]
+        }
+      ],
+      "num_detected": 3
+    },
+    {
+      "case_id": "trievo_09",
+      "category": "infectious_malaria_dengue",
+      "text": "High spiking fevers with rigors, thrombocytopenia, and petechial rash observed following travel.",
+      "expected_entities": [
+        "fevers",
+        "rigors",
+        "thrombocytopenia",
+        "petechial rash"
+      ],
+      "detected_entities": [
+        {
+          "name": "High",
+          "severity": "Moderate",
+          "category": "Pathology / Clinical Problem",
+          "highlightWords": [
+            "High"
+          ],
+          "confidence": 0.3957,
+          "entityType": "DISEASE_PROBLEM",
+          "span": [
+            0,
+            4
+          ]
+        },
+        {
+          "name": "Iking fevers",
+          "severity": "Moderate",
+          "category": "Pathology / Clinical Problem",
+          "highlightWords": [
+            "iking",
+            "fevers"
+          ],
+          "confidence": 0.773,
+          "entityType": "DISEASE_PROBLEM",
+          "span": [
+            7,
+            19
+          ]
+        },
+        {
+          "name": "Ors",
+          "severity": "Moderate",
+          "category": "Pathology / Clinical Problem",
+          "highlightWords": [
+            "ors"
+          ],
+          "confidence": 0.5487,
+          "entityType": "DISEASE_PROBLEM",
+          "span": [
+            28,
+            31
+          ]
+        },
+        {
+          "name": "Thrombocytopenia",
+          "severity": "High",
+          "category": "Pathology / Clinical Problem",
+          "highlightWords": [
+            "thrombocytopenia"
+          ],
+          "confidence": 0.8774,
+          "entityType": "DISEASE_PROBLEM",
+          "span": [
+            33,
+            49
+          ]
+        },
+        {
+          "name": "Petechia",
+          "severity": "Mild",
+          "category": "Pharmacology / Active Substance",
+          "highlightWords": [
+            "petechia"
+          ],
+          "confidence": 0.553,
+          "entityType": "MEDICATION_CHEMICAL",
+          "span": [
+            55,
+            63
+          ]
+        },
+        {
+          "name": "L rash",
+          "severity": "Moderate",
+          "category": "Pathology / Clinical Problem",
+          "highlightWords": [
+            "rash"
+          ],
+          "confidence": 0.6927,
+          "entityType": "DISEASE_PROBLEM",
+          "span": [
+            63,
+            69
+          ]
+        }
+      ],
+      "num_detected": 6
+    },
+    {
+      "case_id": "trievo_10",
+      "category": "trauma_fall",
+      "text": "Elderly woman fell sustaining suspected femoral neck fracture and acute severe hip pain.",
+      "expected_entities": [
+        "femoral neck fracture",
+        "hip pain"
+      ],
+      "detected_entities": [
+        {
+          "name": "Femoral neck fracture",
+          "severity": "Moderate",
+          "category": "Pathology / Clinical Problem",
+          "highlightWords": [
+            "femoral",
+            "neck",
+            "fracture"
+          ],
+          "confidence": 0.7868,
+          "entityType": "DISEASE_PROBLEM",
+          "span": [
+            40,
+            61
+          ]
+        },
+        {
+          "name": "Severe hip pain",
+          "severity": "Moderate",
+          "category": "Pathology / Clinical Problem",
+          "highlightWords": [
+            "severe",
+            "hip",
+            "pain"
+          ],
+          "confidence": 0.6565,
+          "entityType": "DISEASE_PROBLEM",
+          "span": [
+            72,
+            87
+          ]
+        }
+      ],
+      "num_detected": 2
+    },
+    {
+      "case_id": "trievo_11",
+      "category": "respiratory_asthma",
+      "text": "Child presenting with acute asthma exacerbation, gasping, and intercostal retractions.",
+      "expected_entities": [
+        "asthma exacerbation",
+        "gasping",
+        "intercostal retractions"
+      ],
+      "detected_entities": [
+        {
+          "name": "Acute",
+          "severity": "Moderate",
+          "category": "Pathology / Clinical Problem",
+          "highlightWords": [
+            "acute"
+          ],
+          "confidence": 0.3882,
+          "entityType": "DISEASE_PROBLEM",
+          "span": [
+            22,
+            27
+          ]
+        },
+        {
+          "name": "Asthma",
+          "severity": "Moderate",
+          "category": "Pathology / Clinical Problem",
+          "highlightWords": [
+            "asthma"
+          ],
+          "confidence": 0.6306,
+          "entityType": "DISEASE_PROBLEM",
+          "span": [
+            28,
+            34
+          ]
+        },
+        {
+          "name": "Gasping",
+          "severity": "Moderate",
+          "category": "Pathology / Clinical Problem",
+          "highlightWords": [
+            "gasping"
+          ],
+          "confidence": 0.4241,
+          "entityType": "DISEASE_PROBLEM",
+          "span": [
+            49,
+            56
+          ]
+        }
+      ],
+      "num_detected": 3
+    },
+    {
+      "case_id": "trievo_12",
+      "category": "complex_emergency",
+      "text": "Patient has severe acute chest pain for 3 days but denies shortness of breath; treated with nitroglycerin.",
+      "expected_entities": [
+        "chest pain",
+        "shortness of breath",
+        "nitroglycerin"
+      ],
+      "detected_entities": [
+        {
+          "name": "Acute",
+          "severity": "Moderate",
+          "category": "Pathology / Clinical Problem",
+          "highlightWords": [
+            "acute"
+          ],
+          "confidence": 0.5413,
+          "entityType": "DISEASE_PROBLEM",
+          "span": [
+            19,
+            24
+          ]
+        },
+        {
+          "name": "Chest pain",
+          "severity": "Moderate",
+          "category": "Cardiovascular / Acute Condition",
+          "highlightWords": [
+            "chest",
+            "pain"
+          ],
+          "confidence": 0.6818,
+          "entityType": "DISEASE_PROBLEM",
+          "span": [
+            25,
+            35
+          ]
+        },
+        {
+          "name": "Shortness",
+          "severity": "Moderate",
+          "category": "Pathology / Clinical Problem",
+          "highlightWords": [
+            "shortness"
+          ],
+          "confidence": 0.7,
+          "entityType": "DISEASE_PROBLEM",
+          "span": [
+            58,
+            67
+          ]
+        },
+        {
+          "name": "Breath",
+          "severity": "Moderate",
+          "category": "Pathology / Clinical Problem",
+          "highlightWords": [
+            "breath"
+          ],
+          "confidence": 0.6177,
+          "entityType": "DISEASE_PROBLEM",
+          "span": [
+            71,
+            77
+          ]
+        },
+        {
+          "name": "Nitroglycerin",
+          "severity": "Mild",
+          "category": "Pharmacology / Active Substance",
+          "highlightWords": [
+            "nitroglycerin"
+          ],
+          "confidence": 0.9224,
+          "entityType": "MEDICATION_CHEMICAL",
+          "span": [
+            92,
+            105
+          ]
+        }
+      ],
+      "num_detected": 5
+    }
+  ]
+}

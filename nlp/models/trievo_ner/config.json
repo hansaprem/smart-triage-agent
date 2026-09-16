@@ -1,0 +1,52 @@
+{
+  "add_cross_attention": false,
+  "architectures": [
+    "BertForTokenClassification"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": null,
+  "classifier_dropout": null,
+  "dtype": "float32",
+  "eos_token_id": null,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 384,
+  "id2label": {
+    "0": "O",
+    "1": "B-DISEASE_PROBLEM",
+    "2": "I-DISEASE_PROBLEM",
+    "3": "B-MEDICATION_CHEMICAL",
+    "4": "I-MEDICATION_CHEMICAL",
+    "5": "B-SYMPTOM_SIGN",
+    "6": "I-SYMPTOM_SIGN",
+    "7": "B-PROCEDURE_TEST",
+    "8": "I-PROCEDURE_TEST"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 1536,
+  "is_decoder": false,
+  "label2id": {
+    "B-DISEASE_PROBLEM": 1,
+    "B-MEDICATION_CHEMICAL": 3,
+    "B-PROCEDURE_TEST": 7,
+    "B-SYMPTOM_SIGN": 5,
+    "I-DISEASE_PROBLEM": 2,
+    "I-MEDICATION_CHEMICAL": 4,
+    "I-PROCEDURE_TEST": 8,
+    "I-SYMPTOM_SIGN": 6,
+    "O": 0
+  },
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 6,
+  "pad_token_id": 0,
+  "position_embedding_type": "absolute",
+  "tie_word_embeddings": true,
+  "transformers_version": "5.12.1",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 30522
+}
