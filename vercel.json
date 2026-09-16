@@ -14,8 +14,17 @@
     "api/index.py": {
       "memory": 2048,
       "maxDuration": 60,
-      "includeFiles": "nlp/**",
-      "excludeFiles": "{nlp/data/raw/**,nlp/data/processed/**,nlp/tests/**}"
+      "includeFiles": [
+        "nlp/models/trievo_ner/**",
+        "nlp/evaluation/*.json",
+        "nlp/inference/onnx_predict.py"
+      ],
+      "excludeFiles": [
+        "nlp/data/**",
+        "nlp/tests/**",
+        "nlp/preprocessing/**",
+        "nlp/training/**"
+      ]
     }
   }
 }

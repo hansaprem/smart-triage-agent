@@ -20,9 +20,6 @@ REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 if REPO_ROOT not in sys.path:
     sys.path.insert(0, REPO_ROOT)
 
-from nlp.inference.predict import TrievoNERPredictor
-
-logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger("trievo_vercel_api")
 
 app = FastAPI(
@@ -41,19 +38,32 @@ app.add_middleware(
 )
 
 # Global model predictor instance
-PREDICTOR: Optional[TrievoNERPredictor] = None
+PREDICTOR: Optional[Any] = None
 MODEL_DIR = os.path.join(REPO_ROOT, "nlp", "models", "trievo_ner")
 EVAL_DIR = os.path.join(REPO_ROOT, "nlp", "evaluation")
 
 
-def get_predictor() -> TrievoNERPredictor:
+def get_predictor() -> Any:
     global PREDICTOR
     if PREDICTOR is None:
-        logger.info(f"Loading Trievo Clinical NER model from {MODEL_DIR}...")
+        onnx_path = os.path.join(MODEL_DIR, "model.onnx")
+        if os.path.exists(onnx_path):
+            try:
+                from nlp.inference.onnx_predict import TrievoONNXPredictor
+                logger.info(f"Loading Trievo ONNX model from {onnx_path}...")
+                PREDICTOR = TrievoONNXPredictor(model_dir=MODEL_DIR)
+                logger.info("Trievo ONNX model initialized successfully.")
+                return PREDICTOR
+            except Exception as e:
+                logger.warning(f"ONNX initialization failed ({e}), falling back to PyTorch...")
+
         if not os.path.exists(MODEL_DIR):
             raise RuntimeError(f"Trained model checkpoint directory not found at {MODEL_DIR}")
+
+        from nlp.inference.predict import TrievoNERPredictor
+        logger.info(f"Loading Trievo Clinical NER PyTorch model from {MODEL_DIR}...")
         PREDICTOR = TrievoNERPredictor(model_dir=MODEL_DIR)
-        logger.info("Trievo Clinical NER model initialized successfully.")
+        logger.info("Trievo Clinical NER PyTorch model initialized successfully.")
     return PREDICTOR
 
 
@@ -110,7 +120,8 @@ def get_evidence():
     try:
         # Check actual checkpoint files
         checkpoint_files = [
-          {"name": "model.safetensors", "exists": os.path.exists(os.path.join(MODEL_DIR, "model.safetensors")), "size": "90.3 MB"},
+          {"name": "model.safetensors", "exists": os.path.exists(os.path.join(MODEL_DIR, "model.safetensors")), "size": "86.1 MB"},
+          {"name": "model.onnx", "exists": os.path.exists(os.path.join(MODEL_DIR, "model.onnx")), "size": "86.2 MB"},
           {"name": "config.json", "exists": os.path.exists(os.path.join(MODEL_DIR, "config.json")), "size": "1.3 KB"},
           {"name": "tokenizer.json", "exists": os.path.exists(os.path.join(MODEL_DIR, "tokenizer.json")), "size": "712 KB"},
           {"name": "label_mapping.json", "exists": os.path.exists(os.path.join(MODEL_DIR, "label_mapping.json")), "size": "386 B"},
