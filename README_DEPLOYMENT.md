@@ -71,21 +71,26 @@ npx next start -p 3000
 ### Method A: Deploy via GitHub / GitLab (Recommended)
 1. Commit the repository to your Git provider:
    ```bash
-   git add .
-   git commit -m "Deploy Trievo Clinical NLP Prototype to Vercel"
+   git add vercel.json README_DEPLOYMENT.md
+   git commit -m "Configure Vercel Hobby 2048 MB serverless function"
    git push origin main
    ```
-2. Log into [Vercel](https://vercel.com) and click **"Add New..." $\rightarrow$ "Project"**.
-3. Import your `trievo-clinical-nlp` repository.
+2. Log into [Vercel](https://vercel.com) and click **"Add New..." → "Project"**.
+3. Import your `trievo-clinical-nlp` repository (`smart-triage-agent`).
 4. **Project Settings**:
    - **Framework Preset**: Next.js (automatically detected).
    - **Root Directory**: `./` (default).
    - **Build Command**: `npm run build` (default).
    - **Output Directory**: `.next` (default).
-5. **Environment Variables** (Optional / Recommended for Heavy ML Functions):
-   - `VERCEL_SUPPORT_LARGE_FUNCTIONS`: `1` (Enables Vercel Large Functions up to 5GB bundle size).
-6. Click **"Deploy"**.
-7. Once deployment finishes, Vercel gives you your live public production URL (e.g. `https://trievo-clinical-nlp.vercel.app`).
+5. **Serverless Function Resource Limits (Vercel Hobby Plan)**:
+   - **Configured Memory**: `2048 MB` (Maximum allowable allocation for Vercel Personal/Hobby accounts, configured in `vercel.json`).
+   - **Runtime Memory Footprint**: The trained MiniLM-L6-v2 model checkpoint has 22.5M parameters (~86.1 MB safetensors) and requires ~220 MB RAM at runtime, easily fitting within the 2048 MB limit.
+   - **Max Execution Duration**: `60s` (`maxDuration: 60`, well within the Hobby ceiling of 300s).
+   - **Bundle Optimization**: `vercel.json` includes `nlp/**` while excluding raw corpus files (`nlp/data/raw/**`, `nlp/data/processed/**`, `nlp/tests/**`) to keep the serverless zip size compact.
+6. **Environment Variables** (Optional / Recommended):
+   - `VERCEL_SUPPORT_LARGE_FUNCTIONS`: `1`
+7. Click **"Deploy"**.
+8. Once deployment finishes, Vercel provides your live public production URL (e.g. `https://trievo-clinical-nlp.vercel.app`).
 
 ### Method B: Deploy via Vercel CLI
 From the project root:
@@ -196,3 +201,4 @@ When presenting the live public URL to your supervisor, follow this structured w
 1. **Research Prototype**: This system is an academic research and clinical decision-support prototype. It is not an autonomous diagnostic medical device.
 2. **Learned Categories**: The model extracts `DISEASE_PROBLEM`, `MEDICATION_CHEMICAL`, `SYMPTOM_SIGN`, and `PROCEDURE_TEST`.
 3. **Downstream Tasks**: Severity, temporal duration, and negation/assertion are handled as rule-based downstream tasks and are not claimed as learned token classification classes in this baseline NER model.
+4. **Vercel Hobby Plan Runtime Limits**: Serverless functions on Vercel Personal/Hobby accounts are strictly limited to 2048 MB RAM and single-threaded CPU execution. The first cold-start invocation requires ~2–4 seconds to unpack Python packages and load model tensors into PyTorch CPU memory; subsequent warm invocations execute token classification in 100–300ms.
